@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Projects\\BTMat256v5\\app\\build\\intermediates\\res\\merged\\debug\\menu\\context_menu_pattern_list.xml",
+        "source": "E:\\Projects\\BTMat256v5\\app\\src\\main\\res\\menu\\context_menu_pattern_list.xml"
+    },
+    {
+        "merged": "E:\\Projects\\BTMat256v5\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home_menu.xml",
+        "source": "E:\\Projects\\BTMat256v5\\app\\src\\main\\res\\menu\\home_menu.xml"
+    },
+    {
+        "merged": "E:\\Projects\\BTMat256v5\\app\\build\\intermediates\\res\\merged\\debug\\menu\\create_pattern_menu.xml",
+        "source": "E:\\Projects\\BTMat256v5\\app\\src\\main\\res\\menu\\create_pattern_menu.xml"
+    },
+    {
+        "merged": "E:\\Projects\\BTMat256v5\\app\\build\\intermediates\\res\\merged\\debug\\menu\\help_menu.xml",
+        "source": "E:\\Projects\\BTMat256v5\\app\\src\\main\\res\\menu\\help_menu.xml"
+    }
+]

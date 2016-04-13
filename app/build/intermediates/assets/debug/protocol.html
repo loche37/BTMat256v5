@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<head>
+		<title>PROTOCOLE COMMUNICATION</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+	
+	<body>
+
+		<p>Matrice LED 256</p>
+		<br>
+		Loche Jeremy/Jeoffrey Foritano
+		<h1>Protocole de Communication</h1>
+		<h2>Description du système de communication</h2>
+		<p>Communication bluetooth, transmise Octects par Octets.
+		La communication prend en compte la transmission du motif à afficher sur la matrice et des effets
+		qui seront appliqués a ce motif.</p>
+		<p>UUID utilisé dans Android: 00001101-0000-1000-8000-00805F9B34FB</p>
+		<h2>Trame de description des effets:</h2>
+		<p>La trame de description des effets est composée exclusivement d'octets qui seront utiles pour décrire
+		les effets que l'on choisit d'utiliser pour afficher le motif.</p>
+		<h2>Trame de description du motif:</h2>
+		<p>La trame de description du motif est composée exclusivement d'octets qui seront utiles pour décrire
+		le motif 16x16 que l'on souhaîte afficher sur la matrice.
+		Description des trames d'octets:</p>
+		<h2>Trame de description du motif:</h2>
+		<p>Cette trame comporte 33 Octets:</p>
+		<table border="1">
+			<thead>
+			<tr><th> Motif décrit</th> <th>Octet de description</th><th>Octet de valeur</th></tr>
+			</thead>
+			<tbody>
+			<tr><td> Octets envoyés </td> <td> Octet 0 = 'M' </td><td>Octet 1 à 32 = motif décrit</td></tr>
+			<tr><td> Utilité et description </td> <td> Cet Octet correspond au code ASCII du caractère M est définit qu'il sagit d'une trame de description du motif. Cet Octet indique que les 32 prochain octets reçu sont les Octets à utiliser pour définir le motif à afficher sur la matrice. </td><td>Ces Octets représentent le motif décrit horizontalement. Les valeurs brutes des Octets sont ici utilisés pour décrire le motif demandé. Octet 1 = 01001000 Octet 2 = 10010110. Octet 1 et Octet 2 définissent la 1ère ligne de la matrice. La premiere ligne aura alors les LED correspondantes allumées (1=allumé,0=eteinte): Ligne 0 (matrice)=0100100010010110 On suit le même résonnement pour le reste des Octets. Ainsi on décrit bien la matrice avec 16x16 LEDs.</td></tr>
+			</tbody>
+			</table >
+
+		<h2>Trame de description des effets:</h2>
+		Cette trame comporte au plus 2 Octets:
+		<table border="1">
+			<thead>
+			<tr><th> Effet décrit</th><th> Description de l'effet</th><th>Octet de description</th><th>Octet de valeur</th></tr>
+			</thead>
+			<tbody>
+			<tr><td>Statique</td><td>Cet effet représente simplement un motif affiché de manière statique (sans clignotement, sans respiration ni défilement)</td><td>Octet 0= 'N' (None) <br>Octet représentant le code ASCII du caractère N.</td><td>Aucun</td></tr>
+			<tr><td>Clignotement</td><td>Cet effet est un clignotement classique, allumé ou éteint à la vitesse définie par d'autres octets cidessous.</td><td>Octet 0= 'C' (Clignotement) <br>Octet représentant le code ASCII du caractère C.</td><td>Aucun</td></tr>
+			<tr><td>Défilement</td><td>Cet effet est un défilement le long de la matrice avec continuité. Lorsque l'on sort de la matrice d'un coté on réentre du coté opposé. Cet effet est décrit en 4 directions</td><td>Octet 0 = 'D' (Défilement) <br>Octet représentant le code ASCII du caractère D. Cet Octet indique que l'on utilise l'effet défilement et indique que l'Octet suivant est l'Octet définissant le sens de défilement.</td><td>Octet 1= 'U' <br>Défilement du motif vers le haut.<hr>
+		<br>Octet 1='D' Défilement du motif vers le bas.
+		<hr><br>Octet 1='R' Défilement du motif vers la droite.
+		<hr><br>Octet 1='L' Défilement du motif vers la gauche.</td></tr>
+			<tr><td>Respiration</td><td>Cet effet est un clignotement doux, de type "Fade in – Fade out" à la vitesse décrite par les Octets ci-dessous.</td><td>Octet 0= 'F' (Fade in Fade Out) <br>Octet représentant le code ASCII du caractère F.</td><td>Aucun</td></tr>
+			<tr><td>Intensitée Lumineuse</td><td>Ces octets définissent le niveau d'intensité lumineuse des LED pour les effets qui utilisent une luminosité statique (Défilement et Statique). Il y a 16 valeurs d'intensité utilisés.</td><td>Octet 0 ='I' (Intensity). Octet représentant le code ASCII du caractère I. Indique que l'on souhaite regler l'intensité lumineuse et que l'octet suivant correspond à la valeur d'intensitée choisie.</td><td>Octet 1='0' à Octet 1= 'F'. <br>Indique une valeur de 0 à F suivant les conventions Hexadécimales. <br>F = Intensité Max <br>0= Eteint, intensité nulle.</td></tr>
+			<tr><td>Vitesse de clignotement, défilement ou respiration.</td><td>Ces Octets définissent la vitesse des effets clignotement, defilement et respiration. Il y a 10 valeurs de vitesses représentant le "loop time" d'un effet, c'est à dire sa période. <br>Exemple : pour la défilement: T représente le temps qu'il faut au motif pour faire 1 avoir faireexactement 1 tour.</td><td>Octet 0='V' (Velocity / Vitesse) <br>Cet Octet représente le code ASCII du caractère V. Il indique qu'on règle la vitesse d'effets de la matrice et que l'octet suivant est l'octet de la valeur de la vitesse.</td><td>Octet 1='0' à Octet 1='9' <br>'0' est la valeur de la vitesse minimale <br>'9' est la valeur de la vitesse maximale</td></tr>
+			</tbody>
+			</table >
+
+	</body>
+</html>

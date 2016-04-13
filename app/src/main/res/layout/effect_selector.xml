@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ce layout contient tout les éléments graphiques correspondant
+au selectionneur d'effet affiché sur l'activité Home-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_effect_selector"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/title_effect_selector_TEXT_VIEW"
+        android:layout_gravity="center_horizontal" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_effect_selector"
+        android:id="@+id/hint_effect_selector_TEXT_VIEW"
+        android:layout_gravity="center_horizontal" />
+
+
+
+
+    <!-- Intensité lumineuse -->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/intensity_slider"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Vitesse slider -->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/effect_speed_slider"
+        android:layout_gravity="center_horizontal" />
+
+    <!--Radio Group des boutons -->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/radioGroup_effect"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radiobtn_static_effect"
+            android:id="@+id/radioButton_staticEffect"
+            android:layout_gravity="start" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_breath_effect"
+            android:id="@+id/radioButton_breathEffect"
+            android:layout_gravity="start" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_blink_effect"
+            android:id="@+id/radioButton_blinkEffect"
+            android:layout_gravity="start" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_scroll_up_effect"
+            android:id="@+id/radioButton_scrollUpEffect" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_scroll_down_effect"
+            android:id="@+id/radioButton_scrollDownEffect" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_scroll_right_effect"
+            android:id="@+id/radioButton_scrollRightEffect" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobtn_scroll_left_effect"
+            android:id="@+id/radioButton_scrollLeftEffect" />
+
+    </RadioGroup>
+
+
+
+
+</LinearLayout>

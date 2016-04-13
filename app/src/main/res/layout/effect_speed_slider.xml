@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ce layout contient tout les éléments nécessaire pour décrire la barre de séléction de  vitesse des effets
+il est inclu dans effect_selector.xml-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blinkspeed_seekbar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/seekbar_blinkSpeed_TEXT_VIEW"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Lent"
+            android:id="@+id/blinkSpeed_min_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valeur"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/blinkSpeed_value_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rapide"
+            android:id="@+id/blinkSpeed_max_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="9"
+        android:id="@+id/seekbar_blinkSpeed"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

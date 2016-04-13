@@ -1,0 +1,59 @@
+<resources>
+    <!-- Common-->
+    <string name="app_name">BTMat256</string>
+    <string name="none">Aucun</string>
+
+    <!-- CreatePatternActivity-->
+    <string name="activity_create_pattern_title">Créer un motif</string>
+    <string name="switch_drawing_text_enable">Dessiner</string>
+    <string name="switch_drawing_text_disable">Effacer</string>
+    <string name="how_to_draw_text">Touchez la surface ci-dessus pour dessiner.\n Et validez votre dessin en haut a droite.</string>
+    <string name="menu_title_return_pattern">Envoyer ce motif</string>
+    <string name="menu_title_close_pattern">Fermer</string>
+    <!-- HomeActivity-->
+    <string name="btn_text_create_new_motif">Créer et Envoyer un motif</string>
+    <string name="btn_text_open_bt_connexion_activity">Paramètres bluetooth</string>
+    <string name="home_menu_settings">Paramètres</string>
+    <string name="not_bt_device">Sans le Bluetooth, l\'application ne fonctionnera pas. L\'application va s\'arrêter.</string>
+    <string name="hint_device_name">Appareil BT sélectionné :</string>
+    <string name="hint_pattern_created">Motif à envoyer :</string>
+    <string name="hint_none_do_connect">Aucun,\n cliquez sur le logo Bluetooth de la barre d\'état.</string>
+    <string name="button_connect_text">Connexion</string>
+    <string name="connected">connecté</string>
+    <string name="hint_connection_status">Etat de la connection :</string>
+    <string name="disconnected">déconnecté</string>
+    <string name="send">envoyer</string>
+
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">Aucun appareils appairés</string>
+    <string name="title_paired_devices">Appareils BT appairés</string>
+    <string name="button_cancel">Annuler</string>
+    <string name="hint_device_list">Appairez le module Bluetooth du contrôleur de matrice LED, puis sélectionnez le dans cette liste.</string>
+
+
+    <!-- PatternSaveActivity -->
+    <string name="hint_save_pattern">Choisissez un nom pour votre motif:</string>
+
+    <!-- PatternListActivity -->
+    <string name="hint_pattern_list">Sélectionnez le motif à charger dans cette liste.\nPour supprimer un motif, cliquez longtemps sur celui-ci.</string>
+    <string name="pattern_name">Nom du motif</string>
+    <string name="btn_save_pattern">Sauvegarder</string>
+
+
+    <!-- Effect Selector -->
+    <string name="hint_effect_selector">Sélectionnez l\'effet que vous souhaitez utiliser sur votre motif.</string>
+    <string name="radiobtn_static_effect">Statique: Aucun effet</string>
+    <string name="radiobtn_scroll_up_effect">Défilement vers le haut</string>
+    <string name="radiobtn_scroll_down_effect">Défilement vers le bas</string>
+    <string name="radiobtn_scroll_right_effect">Défilement vers la droite</string>
+    <string name="radiobtn_scroll_left_effect">Défilement vers la gauche</string>
+    <string name="radiobtn_breath_effect">Respiration: clignotement avec variation d\'intensité à la vitesse choisie</string>
+    <string name="radiobtn_blink_effect">Clignotement: clignotement Allumé/Eteint à la vitesse choisie</string>
+    <string name="title_effect_selector">Effets</string>
+    <string name="intensity_seekbar">Intensité Lumineuse</string>
+    <string name="blinkspeed_seekbar">Vitesse des effets</string>
+
+</resources>

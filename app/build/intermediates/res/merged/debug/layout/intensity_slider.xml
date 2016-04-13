@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ce Layout contient le slider de selection d'intensité qui est inclus dans
+ effect_selector.xml-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intensity_seekbar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/seekbar_intensity_TEXT_VIEW"
+        android:layout_gravity="center_horizontal" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Min"
+            android:id="@+id/intensity_min_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valeur"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/intensity_value_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Max"
+            android:id="@+id/intensity_max_TEXT_VIEW"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_intensity"
+        android:max="15"
+        android:progress="15"
+        />
+
+</LinearLayout>

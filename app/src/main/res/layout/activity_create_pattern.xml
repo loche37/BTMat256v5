@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <com.jeremy.polytech.btmat256v5.UI.DrawSurfaceView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PixelArtSurfaceView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/PixelArtSurfaceView"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/how_to_draw_text"
+            android:id="@+id/how_to_draw_textView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_gravity="center_horizontal"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tout Effacer"
+            android:id="@+id/btn_erase_pixelart"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            />
+
+
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DrawSwitch"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+    </GridLayout>
+
+</RelativeLayout>

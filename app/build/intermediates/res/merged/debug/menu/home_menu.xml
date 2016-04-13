@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:support="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/home_menu_open_settings"
+        android:title="@string/home_menu_settings"
+        android:visible="false"
+        support:showAsAction="never"
+        />
+
+
+
+    <item
+        android:id="@+id/home_menu_open_bt_connexion"
+        android:title="@string/btn_text_open_bt_connexion_activity"
+        android:icon="@drawable/ic_settings_bluetooth"
+        support:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/home_menu_help"
+        android:title="Aide"
+        support:showAsAction="ifRoom"
+        android:icon="@drawable/ic_help"
+    />
+
+</menu>
